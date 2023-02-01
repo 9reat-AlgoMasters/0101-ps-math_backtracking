@@ -11,14 +11,12 @@ public class Main {
     static int N;
     static int[] roma = new int[4];
     static int[] nums;
-    static boolean[] visited;
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         N = Integer.parseInt(br.readLine());
         nums = new int[N];
         ans = new HashSet<>();
-        visited = new boolean[4];
 
         roma[0] = 1;
         roma[1] = 5;
@@ -31,7 +29,7 @@ public class Main {
         System.out.println(ans.size());
     }
 
-    // 조합
+    // 숫자선택
     static void recur(int depth, int start) {
         if (depth == maxDepth) {
             int sum = 0;
@@ -48,9 +46,7 @@ public class Main {
             }
 
             nums[depth] = roma[i];
-            visited[i] = true;
             recur(depth + 1, i);
-            visited[i] = false;
             nums[depth] = 0;
         }
     }
