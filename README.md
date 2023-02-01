@@ -1,3 +1,1 @@
-# 1주차
-## Topics
-수학, 백트래킹
+# Code Reference
