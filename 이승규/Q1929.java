@@ -22,7 +22,6 @@ public class Q1929 {
             }
         }
     }
-
     public static boolean IsPrime(int n) { // 소수 판별
 
         if (n == 1) return false;
