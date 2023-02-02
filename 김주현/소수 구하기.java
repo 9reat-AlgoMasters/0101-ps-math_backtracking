@@ -33,9 +33,21 @@ public class Q1929 {
         br.close();
     }
     
+    /*
+    * 에라토스테네스의 체
+    * 2를 제외한 2의 배수를 지운다.
+    * -> 3을 제외한 3의 배수를 지운다.
+    * -> 4의 배수는 2의 배수에서 이미 지워졌으니 skip! (continue)
+    * -> 5를 제외한 5의 배수를 지운다.
+    * -> ....
+    * 이 과정을 통해 살아 남게 되는 것은 소수 뿐!
+    * */
     public static void makePrimeNumberInfo() {
         init();
         for (int i=2; i<Math.sqrt(MAX_SIZE); i++) {
+            if (!isPrime[i]) {
+                continue;
+            }
             for (int j=i*i; j<=MAX_SIZE; j+=i) {
                 isPrime[j] = false;
             }
