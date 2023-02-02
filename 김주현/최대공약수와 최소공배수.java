@@ -24,6 +24,7 @@ public class Q2609 {
         return calculateGcdByRecursion(Math.max(num1, num2), Math.min(num1, num2));
     }
     
+    // 유클리드 호제법 - 최대공약수를 구하는 알고리즘
     public static int calculateGcdByRecursion(int biggerNum, int smallerNum) {
         if (smallerNum == 0) {
             return biggerNum;
